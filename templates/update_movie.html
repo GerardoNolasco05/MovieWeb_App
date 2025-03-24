@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Movie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-overlay"></div>
+        <h1>Update Movie</h1>
+    </header>
+
+    <section class="main-content">
+        <form method="POST">
+            <input type="hidden" name="user_id" value="{{ user_id }}">
+            <input type="hidden" name="movie_id" value="{{ movie.id }}">
+
+            <div class="form-group">
+                <label for="name">Movie Name:</label>
+                <input type="text" name="name" value="{{ movie.name }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="director">Director:</label>
+                <input type="text" name="director" value="{{ movie.director }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="number" name="year" value="{{ movie.year }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <input type="number" step="0.1" name="rating" value="{{ movie.rating }}" required>
+            </div>
+
+            <button type="submit" class="update-movie-btn">Update Movie</button>
+        </form>
+
+        <a href="{{ url_for('user_movies', user_id=user_id) }}" class="nav-btn back-to-movies-btn">Back to Movies</a>
+    </section>
+</body>
+</html>

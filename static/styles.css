@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #B6C8A9; /* Sage Green */
+    color: #695958; /* Dark Olive Gray */
+    margin: 0;
+}
+
+/* Main Header Styling */
+header.main-header {
+    background-color: #695958; /* Dark Olive Gray */
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header.main-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header.main-header p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Navigation Bar */
+nav.main-nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav.main-nav .nav-btn {
+    text-decoration: none;
+    background-color: #C8EAD3; /* Mint Green */
+    color: #695958; /* Dark Olive Gray */
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav.main-nav .nav-btn:hover {
+    background-color: #CEDADA; /* Soft Gray */
+    color: #695958;
+}
+
+/* Main Content Section */
+section.main-content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #CFFFE5; /* Pale Green */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section.main-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section.main-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* User Bubbles */
+.user-list {
+    display: flex;
+    flex-direction: column; /* Stack names vertically */
+    align-items: center;
+    gap: 15px; /* Space between each bubble */
+}
+
+.user-bubble {
+    text-decoration: none; /* No underline */
+    color: #ffffff; /* White font color */
+    background-color: #695958; /* Mint Green (Updated Green) */
+    padding: 5px 20px;
+    border-radius: 5px; /* Round edges for bubble effect */
+    font-size: 1rem;
+    font-weight: regular;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    width: auto;
+    max-width: 350px; /* Limit the width of each bubble */
+    text-align: center;
+}
+
+.user-bubble:hover {
+    background-color: #A0D4B4; /* Darker Mint Green on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Movie List Styling */
+ul {
+    list-style-type: none; /* Remove the default dot (bullet point) */
+    padding: 0; /* Remove any default padding */
+}
+
+.movie-info {
+    margin-bottom: 20px; /* Add space between each movie */
+}
+
+/* Movie details styling */
+.movie-details {
+    text-align: center; /* Center align the movie info */
+    margin-bottom: 10px; /* Space below the movie details */
+}
+
+/* Buttons container for side-by-side layout */
+.movie-buttons {
+    display: flex; /* Use flexbox to align the buttons side by side */
+    gap: 20px; /* Space between the buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 10px; /* Add space between the movie info and the buttons */
+}
+
+/* Separator line between movie details */
+.movie-separator {
+    border: 0;
+    border-top: 1px solid #CEDADA; /* Light gray line */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Delete Button Styling */
+button.delete-movie-btn {
+    background-color: #F28D8C; /* Light Red background for delete */
+    color: #fff; /* White text */
+    padding: 4px 15px;
+    border-radius: 5px; /* More rounded button */
+    font-size: 1rem;
+    font-weight: regular;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase; /* Uppercase text for better emphasis */
+}
+
+button.delete-movie-btn:hover {
+    background-color: #D36A65; /* Darker Red on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
+}
+
+button.delete-movie-btn:active {
+    transform: scale(1); /* Return to normal size when clicked */
+    background-color: #B34D47; /* Even darker red when clicked */
+}
+
+button.delete-movie-btn:focus {
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 0 5px 3px rgba(255, 0, 0, 0.2); /* Add a focus shadow */
+}
+
+/* Update Button Styling */
+.update-movie-btn {
+    background-color: #A0D4B4; /* Light Green background for update */
+    color: #fff; /* White text */
+    padding: 1px 15px;
+    border-radius: 5px; /* Rounded button */
+    font-size: 1rem;
+    font-weight: regular;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase; /* Uppercase text for better emphasis */
+     text-decoration: none; /* Remove underline */
+}
+
+.update-movie-btn:hover {
+    background-color: #8EC8A2; /* Darker Green on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
+}
+
+.update-movie-btn:active {
+    transform: scale(1); /* Return to normal size when clicked */
+    background-color: #7FBA8A; /* Even darker green when clicked */
+}
+
+.update-movie-btn:focus {
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 0 5px 3px rgba(0, 255, 0, 0.2); /* Add a focus shadow */
+}
+
+/* Add a New Movie Button Styling */
+.add-movie-btn {
+    background-color: #695958; /* Light Green background */
+    color: #fff; /* White text */
+    padding: 1px 5px;
+    border-radius: 5px; /* Rounded button */
+    font-size: 0.7rem;
+    font-weight: regular;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase; /* Uppercase text for better emphasis */
+    text-decoration: none; /* Remove underline */
+}
+
+.add-movie-btn:hover {
+    background-color: #8EC8A2; /* Darker Green on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
+}
+
+.add-movie-btn:active {
+    transform: scale(1); /* Return to normal size when clicked */
+    background-color: #7FBA8A; /* Even darker green when clicked */
+}
+
+.add-movie-btn:focus {
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 0 5px 3px rgba(0, 255, 0, 0.2); /* Add a focus shadow */
+}
+
+/* Back to Users Button Styling */
+.back-to-users-btn {
+    background-color: #695958; /* Light Red background */
+    color: #fff; /* White text */
+    padding: 1px 12px;
+    border-radius: 5px; /* Rounded button */
+    font-size: 0.7rem;
+    font-weight: regular;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase; /* Uppercase text for better emphasis */
+    text-decoration: none; /* Remove underline */
+}
+
+.back-to-users-btn:hover {
+    background-color: #D36A65; /* Darker Red on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
+}
+
+.back-to-users-btn:active {
+    transform: scale(1); /* Return to normal size when clicked */
+    background-color: #B34D47; /* Even darker red when clicked */
+}
+
+.back-to-users-btn:focus {
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 0 5px 3px rgba(255, 0, 0, 0.2); /* Add a focus shadow */
+}
+
+/* Styling for form labels and input fields */
+.form-group {
+    margin-bottom: 15px; /* Space between label/input */
+    text-align: left; /* Align labels to the left */
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #695958;
+    margin-bottom: 5px;
+    display: block; /* Display label as block so it appears above the input */
+}
+
+.form-group input {
+    width: 100%; /* Make input fields stretch to fill the container */
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #CEDADA; /* Light gray border */
+    font-size: 1rem;
+    color: #695958;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #A0D4B4; /* Light green when focused */
+    box-shadow: 0 0 8px rgba(160, 212, 180, 0.5);
+}
+
+/* Updated Button Styling for Update Movie */
+button.update-movie-btn {
+    background-color: #A0D4B4; /* Light Green background for update */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 20px; /* Space from the inputs */
+}
+
+button.update-movie-btn:hover {
+    background-color: #8EC8A2; /* Darker Green on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button.update-movie-btn:active {
+    background-color: #7FBA8A;
+    transform: scale(1);
+}
+
+button.update-movie-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 3px rgba(0, 255, 0, 0.2);
+}
+
+/* Updated Back to Movies Button Styling */
+a.back-to-movies-btn {
+    background-color: #C8EAD3;
+    color: #695958;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.back-to-movies-btn:hover {
+    background-color: #CEDADA;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+a.back-to-movies-btn:active {
+    background-color: #A8C6A1;
+    transform: scale(1);
+}
+
+/* Styling for form labels and input fields */
+.form-group {
+    margin-bottom: 15px; /* Space between label/input */
+    text-align: left; /* Align labels to the left */
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #695958;
+    margin-bottom: 5px;
+    display: block; /* Display label as block so it appears above the input */
+}
+
+.form-group input {
+    width: 100%; /* Make input fields stretch to fill the container */
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #CEDADA; /* Light gray border */
+    font-size: 1rem;
+    color: #695958;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #A0D4B4; /* Light green when focused */
+    box-shadow: 0 0 8px rgba(160, 212, 180, 0.5);
+}
+
+/* Updated Button Styling for Add User */
+button.update-movie-btn {
+    background-color: #A0D4B4; /* Light Green background for update */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 20px; /* Space from the inputs */
+}
+
+button.update-movie-btn:hover {
+    background-color: #8EC8A2; /* Darker Green on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button.update-movie-btn:active {
+    background-color: #7FBA8A;
+    transform: scale(1);
+}
+
+button.update-movie-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 3px rgba(0, 255, 0, 0.2);
+}
+
+/* Updated Back to Users Button Styling */
+a.back-to-movies-btn {
+    background-color: #C8EAD3;
+    color: #695958;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.back-to-movies-btn:hover {
+    background-color: #CEDADA;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+a.back-to-movies-btn:active {
+    background-color: #A8C6A1;
+    transform: scale(1);
+}
+
+/* Styling for form labels and input fields */
+.form-group {
+    margin-bottom: 15px; /* Space between label/input */
+    text-align: left; /* Align labels to the left */
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #695958;
+    margin-bottom: 5px;
+    display: block; /* Display label as block so it appears above the input */
+}
+
+.form-group input {
+    width: 100%; /* Make input fields stretch to fill the container */
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #CEDADA; /* Light gray border */
+    font-size: 1rem;
+    color: #695958;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #A0D4B4; /* Light green when focused */
+    box-shadow: 0 0 8px rgba(160, 212, 180, 0.5);
+}
+
+/* Updated Button Styling for Add Movie */
+button.update-movie-btn {
+    background-color: #A0D4B4; /* Light Green background for update */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 20px; /* Space from the inputs */
+}
+
+button.update-movie-btn:hover {
+    background-color: #8EC8A2; /* Darker Green on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button.update-movie-btn:active {
+    background-color: #7FBA8A;
+    transform: scale(1);
+}
+
+button.update-movie-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 3px rgba(0, 255, 0, 0.2);
+}
+
+/* Updated Back to Movies Button Styling */
+a.back-to-movies-btn {
+    background-color: #C8EAD3;
+    color: #695958;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.back-to-movies-btn:hover {
+    background-color: #CEDADA;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+a.back-to-movies-btn:active {
+    background-color: #A8C6A1;
+    transform: scale(1);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User - MovieWeb App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-overlay"></div>
+        <h1>Add a New User</h1>
+    </header>
+
+    <section class="main-content">
+        <form action="{{ url_for('add_user') }}" method="post">
+            <div class="form-group">
+                <label for="name">User Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <button type="submit" class="update-movie-btn">Add User</button>
+        </form>
+
+        <a href="{{ url_for('list_users') }}" class="nav-btn back-to-users-btn">Back to Users</a>
+    </section>
+</body>
+</html>

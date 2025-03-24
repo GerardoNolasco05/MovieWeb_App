@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieWeb App - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-overlay"></div>
+        <h1>Welcome to MovieWeb App</h1>
+        <p>Your favorite movie collection, just a click away!</p>
+    </header>
+
+    <nav class="main-nav">
+        <a href="{{ url_for('list_users') }}" class="nav-btn">View All Users</a>
+        <a href="{{ url_for('add_user') }}" class="nav-btn">Add New User</a>
+    </nav>
+
+    <section class="main-content">
+        <h2>What is MovieWeb App?</h2>
+        <p>MovieWeb allows users to track their favorite movies and manage a personal movie collection.</p>
+        <p>Start by adding a user, and then begin adding movies to their collection. You'll be able to update and delete movies as you go.</p>
+    </section>
+</body>
+</html>
